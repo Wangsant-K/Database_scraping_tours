@@ -3,6 +3,11 @@ import selectorlib
 import time
 from send_email import send_email
 
+
+"INSERT INTO events VALUES('Tiger', 'Tiger City', '2088.10.14')"
+"SELECT * FROM events WHERE date='2088.10.14'"
+"DELETE FROM events WHERE band='Tiger'"
+
 URL = "http://programmer100.pythonanywhere.com/tours/"
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) '
@@ -46,4 +51,3 @@ if __name__ == "__main__":
                 store(extracted)
                 send_email(message="Hey, new event was found!")
         time.sleep(2)
-
